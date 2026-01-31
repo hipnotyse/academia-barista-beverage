@@ -1,0 +1,76 @@
+/* styles.css - design simples, elegante e responsivo */
+:root{
+  --bg:#fff;
+  --text:#1a1a1a;
+  --muted:#6b6b6b;
+  --accent:#6b3f2b; /* marrom café */
+  --gold:#c9a86b;
+  --container:1200px;
+  --radius:12px;
+  --shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Open Sans',system-ui,Arial,sans-serif;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+
+/* Header */
+.site-header{background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);backdrop-filter: blur(2px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(0,0,0,0.04)}
+.header-inner{display:flex;align-items:center;gap:20px;justify-content:space-between}
+.brand h1{font-family:'Playfair Display',serif;margin:0;font-size:20px;letter-spacing:0.3px}
+.tagline{margin:4px 0 0;font-size:13px;color:var(--muted)}
+
+/* Nav */
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-weight:600;font-size:15px;opacity:0.9}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:#fff;border-color:rgba(0,0,0,0.06);box-shadow:var(--shadow)}
+.btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:10px 16px}
+.btn-sm{padding:8px 12px;font-size:14px}
+
+/* Hero */
+.hero{padding:48px 0 56px}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center}
+.hero h2{font-family:'Playfair Display',serif;margin:0 0 12px;font-size:34px}
+.hero p{margin:0 0 18px;color:var(--muted);line-height:1.6}
+.hero-image .image-placeholder{height:300px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#4b2b20);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600}
+
+/* About */
+.about{padding:40px 0}
+.about h3{font-family:'Playfair Display',serif;margin-bottom:12px;font-size:26px}
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:center}
+.about .values{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
+.about .values li{margin:8px 0}
+
+/* Courses */
+.courses{padding:44px 0;background:linear-gradient(180deg,rgba(0,0,0,0.01),transparent)}
+.courses h3{font-family:'Playfair Display',serif;margin-bottom:6px;font-size:26px}
+.lead{color:var(--muted);margin-bottom:18px}
+.cards{display:flex;gap:18px;flex-wrap:wrap}
+.card{flex:1 1 300px;background:#fff;border-radius:12px;padding:18px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.04)}
+.card h4{margin:0 0 8px;font-size:18px}
+.card p{margin:0 0 12px;color:var(--muted)}
+.card .meta{font-size:13px;color:var(--muted);margin-bottom:12px}
+
+/* Contact */
+.contact{padding:44px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
+.form label{display:block;margin:12px 0 6px;font-weight:600}
+.form input,.form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);font-size:15px}
+.contact-info .info-item{margin-bottom:14px}
+.contact-info a{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(0,0,0,0.04);padding:20px 0;margin-top:30px;background:#faf6f2}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.footer-nav{display:flex;gap:12px}
+.footer-nav a{color:var(--muted);text-decoration:none;font-weight:600}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;order:0}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
+  .nav{flex-wrap:wrap;gap:8px}
+}
